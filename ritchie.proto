@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.ritchie";
+option java_outer_classname = "RitchieProto";
+option objc_class_prefix = "RIT";
+
+package ritchie;
+
+// The Formula service definition.
+service Ritchie {
+    rpc Ritchie (RitchieRequest) returns (RitchieReply) {}
+}
+
+// The request message
+message RitchieRequest {
+    string name = 1;
+    string boolean = 2;
+    string automate = 3;
+    string text = 4;
+}
+
+// The response message
+message RitchieReply {
+    string message = 1;
+}
