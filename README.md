@@ -1,4 +1,4 @@
-# Protobuf files
+# POC Proto
 
 This repository contains diversous protobuf files to use with gRPC services implementations.
 
