@@ -1,0 +1,21 @@
+name: Open Issue When Updating user.proto
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '**/user.proto'
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Open new ISSUE on GuillaumeFalourd/formulas-gRPC repository
+      uses: GuillaumeFalourd/open-issue-action@v1
+      with:
+        access-token: ${{ secrets.ACCESS_TOKEN }}
+        repo-owner: GuillaumeFalourd
+        repo-name: formulas-gRPC
+        issue-title: Update Formula gRPC with user.proto
+        issue-body: New ISSUE refering to update from the user.proto file (https://github.com/GuillaumeFalourd/poc-proto/blob/main/user/user.proto)
