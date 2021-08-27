@@ -20,4 +20,3 @@ message APIResponse{
 
 message Empty{
 }
-
